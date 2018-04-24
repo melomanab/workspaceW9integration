@@ -1,0 +1,10 @@
+INDEX VERSION 1.130+C:\formationJava\workspaceW9integration\.metadata\.plugins\org.eclipse.jdt.core
+2382234975.index
+97545919.index
+3357146029.index
+2119191317.index
+1324761868.index
+236653941.index
+2546671358.index
+1929026401.index
+2692284374.index

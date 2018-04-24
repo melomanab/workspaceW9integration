@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="domaine.Client"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.map.ObjectMapper"/>
+    <fullyQualifiedTypeName name="gtm.formation.demoJerseyClient.domaine.ClientDom"/>
+</qualifiedTypeNameHistroy>

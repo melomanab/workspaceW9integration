@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+C:\formationJava\workspaceW9integration\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1929026401.index
+97545919.index
+1854165678.index
+2119191317.index

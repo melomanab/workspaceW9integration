@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<f:view>
+
+	<head>
+<meta charset="ISO-8859-1"></meta>
+
+
+<title>Bootstrap time...</title>
+<!-- css de bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
+<!-- css perso -->
+<link rel="stylesheet" href="css/style.css"></link>
+<!-- js perso si besoin -->
+<!-- <script src="javascript/script.js" type="text/javascript"></script> -->
+
+<!-- jquery de bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+		
+		
+
+		<div class="container opacityContainer">
+			
+			<!-- menu -->
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<h:outputLink value = "#" class="nav-link">Create</h:outputLink> 
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+			<!-- contenu de la partie central -->
+			<div>
+				<!-- titre -->
+				<h1 class="positionTitre">Create</h1>
+
+				<h:form>
+
+					<h:panelGrid id="panel" columns="3" border="0" cellpadding="10"
+						cellspacing="1">
+
+
+						<div>
+							<label>Nom</label>
+							<h:inputText id="nom" value="#{userbean.nom}" required="true" />
+							<h:message for="nom" />
+						</div>
+						<div>
+							<label>Prenom</label>
+							<h:inputText id="prenom" value="#{userbean.prenom}"	required="true" />
+							<h:message for="prenom" />
+						</div>
+
+						<div>
+							<label>Email</label>
+							<h:inputText id="email" value="#{userbean.email}" />
+							<h:message for="email" />
+						</div>
+						<div>
+							<label>Date de naissance</label>
+							<h:inputText id="date" value="#{userbean.datedenaissance}" />
+							<h:message for="date" />
+						</div>
+
+						<f:facet name="footer">
+							<h:panelGroup style="display:block; text-align:center">
+								<h:commandButton value="Creation" action="#{userbean.appelTraitement}"/>
+							</h:panelGroup>
+						</f:facet>
+						
+					</h:panelGrid>
+
+
+				</h:form>
+
+			</div>
+
+
+		</div>
+
+	</body>
+</f:view>
+</html>

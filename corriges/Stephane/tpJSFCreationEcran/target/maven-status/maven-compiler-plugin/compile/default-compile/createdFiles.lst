@@ -1,0 +1,4 @@
+fr\gtm\domaine\Client.class
+fr\gtm\dao\ClientDao.class
+fr\gtm\service\ServiceClient.class
+fr\gtm\presentation\UserBean.class

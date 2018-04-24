@@ -1,0 +1,67 @@
+package gtm.formation.demoJerseyClient.lanceur;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
+import gtm.formation.demoJerseyClient.domaine.Track;
+
+public class ClientJerseyPostClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+
+			// --- Client Java
+			Client client = Client.create();
+
+			// --- Preparation requete URL verbe:POST
+
+			// A. sur serveur local: OK
+			WebResource webResource = client
+					.resource("http://localhost:8080/demoJerseyJson/webapi/ws/client/post");
+
+			// B. sur serveur distant: OK
+			// WebResource webResource =
+			// client.resource("http://192.168.1.55:8080/tpJson/rest/json/metallica/post");
+
+			// Input (required in POST)
+			// A. Flux JSON EN DUR: OK
+
+			// String input = "{\"singer\":\"Metallica\",\"title\":\"Fade To Black\"}";
+			
+			String input = "{\"nom\":\"Moreno\",\"prenom\":\"Beatriz\"}";
+			
+			// B. Flux JSON a partir d'un objet Java
+			// Simule entrée formulaire
+			// Track inputTrack = new Track("");
+
+			// --- Requete/Response
+			// Requête de type POST (reçois input)
+			ClientResponse response = webResource.type("application/json").post(ClientResponse.class, input);
+
+			if (response.getStatus() != 201) {
+				throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
+			}
+
+			// Recuperation données
+			System.out.println("Output from Server .... \n");
+			String output = response.getEntity(String.class);
+			System.out.println(output);
+
+			// Recuperation d'autres detail de la reponse
+			String langue = response.getLanguage();
+			int length = response.getLength();
+			System.out.println("Langue:" + langue);
+			System.out.println("Length:" + length);
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+
+}
